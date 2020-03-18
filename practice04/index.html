@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practice04</title>
+  </head>
+  <body>
+    <script>
+      function sort(array) {
+        let swapp;
+        let arrayLength = array.length - 1;
+        do {
+          swapp = false;
+          for (let i = 0; i < arrayLength; i++) {
+            if (array[i] > array[i + 1]) {
+              let temp = array[i];
+              array[i] = array[i + 1];
+              array[i + 1] = temp;
+              swapp = true;
+            }
+          }
+          arrayLength--;
+        } while (swapp);
+        return array;
+      }
+    </script>
+  </body>
+</html>
